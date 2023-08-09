@@ -23,8 +23,8 @@ function Home() {
           <Button colorScheme="teal">Search</Button>
         </div>
         <div className="flex flex-wrap gap-5 w-full justify-center items-center ">
-          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((e) => (
-            <CardComponent key={e} />
+          {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((e, i) => (
+            <CardComponent key={e} id={i} />
           ))}
         </div>
       </div>

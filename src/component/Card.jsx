@@ -13,8 +13,11 @@ import {
 } from "@chakra-ui/react";
 import { faker } from "@faker-js/faker";
 import { Rating } from "react-simple-star-rating";
+import { useNavigate } from "react-router-dom";
 
-function CardComponent() {
+function CardComponent({ id }) {
+  const navigate = useNavigate();
+
   return (
     <Card maxW="220px">
       <CardBody>
@@ -59,7 +62,7 @@ function CardComponent() {
             variant="solid"
             size={"sm"}
             colorScheme="teal"
-            onClick={() => console.log("hehe")}
+            onClick={() => navigate(`detail/${id}`)}
           >
             Buy now
           </Button>
